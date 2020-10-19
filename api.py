@@ -21,7 +21,8 @@
 import pickle
 import json
 import numpy as np
-from model import load_model, make_prediction
+from model import load_model
+from model import make_prediction
 from flask import Flask, request, jsonify
 
 # Application definition
@@ -30,7 +31,7 @@ app = Flask(__name__)
 # Load our model into memory.
 # Please update this path to reflect your own trained model.
 static_model = load_model(
-    path_to_model='assets/trained-models/sendy_simple_lm_regression.pkl')
+    path_to_model='assets/trained-models/CatRegression.pkl')
 
 print ('-'*40)
 print ('Model succesfully loaded')
